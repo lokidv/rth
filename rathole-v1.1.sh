@@ -65,18 +65,7 @@ SERVER_COUNTRY=$(curl -sS "http://ip-api.com/json/$SERVER_IP" | jq -r '.country'
 SERVER_ISP=$(curl -sS "http://ip-api.com/json/$SERVER_IP" | jq -r '.isp')
 
 # Function to display ASCII logo
-display_logo() {
-    echo -e "${BLUE}"
-    cat << "EOF"
- ____      _  _____ _   _  ___  _     _____ 
-|  _ \    / \|_   _| | | |/ _ \| |   | ____|
-| |_) |  / _ \ | | | |_| | | | | |   |  _|  
-|  _ <  / ___ \| | |  _  | |_| | |___| |___ 
-|_| \_\/_/   \_\_| |_| |_|\___/|_____|_____|  
-                  By github.com/Musixal v1.1                       
-EOF
-    echo -e "${NC}"
-}
+
 
 # Function to display server location and IP
 display_server_info() {
