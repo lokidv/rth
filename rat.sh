@@ -65,7 +65,11 @@ SERVER_COUNTRY=$(curl -sS "http://ip-api.com/json/$SERVER_IP" | jq -r '.country'
 SERVER_ISP=$(curl -sS "http://ip-api.com/json/$SERVER_IP" | jq -r '.isp')
 
 # Function to display ASCII logo
-
+display_logo() {
+    echo -e "${BLUE}"
+  
+    echo -e "${NC}"
+}
 
 # Function to display server location and IP
 display_server_info() {
